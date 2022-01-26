@@ -1,0 +1,723 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    color: black;
+}
+
+@font-face {
+    font-family: vladimir;
+    src: url(../fonts/VLADIMIR.TTF);
+}
+
+body{
+    background-color: #dfd4dc;
+}
+
+/* Diseño del menu */
+
+#menuImg{
+    display: flex;
+    justify-content: center;
+    margin: 5%;
+    background-color: #C0BBCB;
+}
+
+#main-nav{
+    z-index: 1;
+    width: 15%;
+    left: 0px;
+    position: fixed;
+}
+
+#menuImg p{
+    font-size: 1.2vw;
+}
+
+#main-nav a{
+    color: black;
+    text-decoration: none;
+    font-size: 1vw;
+    background-color: #C0BBCB;
+    display: flex;
+    height: 3vw;
+    align-items: center;
+    justify-content: center;
+    transition: 0.4s;
+}
+
+#main-nav li{
+    display: none;
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+
+.menu{
+   flex-direction: column;
+}
+
+.subMenu li{
+    position: absolute;
+    top: 0px;
+}
+
+.subMenu{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+}
+
+#menuImg img{
+    width: 20%;
+    display: flex;
+}
+
+/* Declaracion comportamiento del menu */ 
+
+#main-nav a:hover {
+    background-color: #dfd4dc;
+}
+
+#main-nav:hover .menu > li{
+    display: block;
+}
+
+#main-nav li:hover .subMenu li{
+    display: block;
+    top:0px;
+}
+
+/* Diseño de Productos y contenedor de Productos */
+
+.productsContainer{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.product{
+    position: relative;
+    overflow: hidden;
+    margin-top: 3px;
+    flex-basis: 20%;
+    display: flex;
+    flex-direction: column;
+}
+
+.productImg{
+    display: flex;
+    justify-content: center;
+}
+
+.productImg img{
+    border: 1px solid black;
+    max-width: 100%;
+}
+
+.productInfo *{
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+/* Diseño del index.html */
+
+/* Diseño del layout */
+
+.indexLayout{
+    display: grid;
+    width: 100%vw;
+    grid-template-areas: 
+    "header"
+    "ofertas"
+    "immediateStock"
+    "popularProducts"
+    "footer";
+    grid-row-gap: 5%;
+}
+
+/* Diseño del cuerpo */
+
+.presentation{
+    grid-area: header;
+    background-color: #dfd4dc;
+    display: grid;
+    grid-template-areas:
+    "imagoTipo"
+    "description";
+    justify-content: center;
+    align-items: center;
+}
+
+.imagoTipo{
+    grid-area: imagoTipo;
+    max-width: 100%;
+}
+
+.imagoTipo a h1{
+    font-family: vladimir;
+    text-align: center;
+    font-size: 10vw;
+}
+
+.description{
+    grid-area: description;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.sale{
+    grid-area: ofertas;
+    display: grid;
+    grid-template-areas: 
+    "oferta1 oferta2";
+}
+
+.oferta1{
+    grid-area: oferta1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.oferta2{
+    grid-area: oferta2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.immediateStock{
+    grid-area: immediateStock;
+    width: 100%;
+    height: fit-content;
+    background-color: #C0BBCB;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.immediateStock a{
+    width: 100%;
+    display: flex;
+    font-size: 5vh;
+    justify-content: center;   
+}
+
+.popularProducts{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.popularProductsTitle{
+    text-align: center;
+    font-size: 5vh;
+}
+
+/* Diseño de informacion.css */
+/* Diseño del layout */
+
+.infoLayout{
+    display: grid;
+    height: auto;
+    grid-template-areas: 
+    "infoTitle"
+    "infoBody"
+    "footer";
+    grid-template-rows: 100px auto 10%;
+}
+
+/* Diseño interno de .title */
+
+.infoTitle{
+    grid-area: infoTitle;
+    display: flex;
+    justify-content: center;
+}
+
+.infoTitle h1 a{
+    font-family: vladimir;
+    font-size: 4vw;
+}
+
+/* Diseño del Body */
+
+.infoBody{
+    grid-area: infoBody;
+    display: grid;
+    height: auto;
+    grid-template-areas:
+    "talles"
+    "telas"
+    ;
+    grid-template-rows: auto;
+}
+
+/* Diseño Tutorial talles */
+
+.talles{
+    grid-area: talles;
+    display: grid;
+    grid-template-areas:
+    "tituloTalles tituloTalles"
+    "bombis corpis";
+    grid-template-columns: 1fr 1fr;
+}
+
+.tituloTalles{
+    grid-area: tituloTalles;
+    font-family: vladimir;
+    font-size: 3vw;
+    text-align: center;
+}
+
+.bombis{
+    grid-area: bombis;
+    justify-self: center;
+}
+
+.corpis{
+    grid-area: corpis;
+    justify-self: center;
+}
+
+/* Diseño Informacion sobre telas */
+
+.telas{
+    grid-area: telas;
+}
+
+.tituloTelas{
+    font-family: vladimir;
+    font-size: 2vw;
+    text-align: center;
+}
+
+/* Diseño interno informacion de tela */
+
+.tela{
+    background-color: #C0BBCB;
+    border-radius: 15px;
+    width: 100%;
+    display: grid;
+    grid-template-areas:
+    "telaTitle"
+    "telaContent";
+    grid-template-rows: 40px auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.telaTitle{
+    grid-area: telaTitle;
+    display: flex;
+    justify-content: center;
+}
+
+.telaTitle p{
+    font-size: 40px;
+}
+
+.telaContent{
+    grid-area: telaContent;
+    display: grid;
+    grid-template-areas: "telaImage telaDescription";
+    grid-template-columns: 600px auto ;
+}
+
+.telaImage{
+    grid-area: telaImage;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.telaDescription{
+    grid-area: telaDescription;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}   
+
+.telaDescription p{
+    font-size: 20px;
+}
+
+/* Diseño de disenos.css */
+
+/* Diseño del layout */
+
+.disenosLayout{
+    display: grid;
+    height: auto;
+    grid-template-areas: 
+    "disenoTitle"
+    "disenoBody"
+    "footer";
+    grid-template-rows: 100px auto 10%;
+}
+
+/* Diseño interno de .title */
+
+.disenoTitle{
+    grid-area: disenoTitle;
+    display: flex;
+    justify-content: center;
+}
+
+.disenoTitle h1 a{
+    font-family: vladimir;
+    font-size: 4vw;
+}
+
+/* Diseño interno del body */
+
+.disenoBody{
+    grid-area: disenoBody;
+    display: flex;
+    flex-direction: column;
+    background-color: #C0BBCB;
+}
+
+/* Diseño del titulo de .body */
+
+.disenoBodyTitle{
+    margin: 3vw;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+.disenoBodyTitle p{
+    font-size: 3vw;
+}
+
+/* Diseño de quienes-somos.css */
+
+/* Diseño del layout */
+
+.qsLayout{
+    display: grid;
+    grid-template-areas: 
+    "qstitle"
+    "qsBody"
+    "footer"
+    ;
+    grid-template-rows: 100px auto auto;
+}
+
+/* Diseño interno de .title */
+
+.qsTitle{
+    grid-area: qstitle;
+    display: flex;
+    justify-content: center;
+}
+
+.qsTitle h1 a{
+    font-family: vladimir;
+    font-size: 4vw;
+}
+
+/* Diseño interno de .qsBody */
+
+.qsBody{
+    grid-area: qsBody;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Diseño interno de cada Descripcion */
+
+.desc{
+    background-color: #C0BBCB;
+    margin-bottom: 2vw;
+    border-radius: 2vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.descTitulo{
+    font-family: vladimir;
+    font-size: 2em;
+    text-align: center;
+}
+
+.descContenido{
+    text-align: center;
+    margin: 2vw;
+}
+
+/* Diseño de ofertas.css */
+
+/* Diseño del layout */
+
+.ofertasLayout{
+    display: grid;
+    height: auto;
+    grid-template-areas: 
+    "ofertasTitle"
+    "ofertasBody"
+    "footer";
+    grid-template-rows: 100px auto 10%;
+}
+
+/* Diseño interno de .title */
+
+.ofertasTitle{
+    grid-area: ofertasTitle;
+    display: flex;
+    justify-content: center;
+}
+
+.ofertasTitle h1 a{
+    font-family: vladimir;
+    font-size: 5vh;
+    }
+
+/* Diseño interno de .body */
+.ofertasBody{
+    grid-area: ofertasBody;
+    display: grid;
+    grid-template-areas:
+    "ofertas"
+    "stock"
+    ;
+    grid-template-rows: auto;
+    grid-row-gap: 20px;
+}
+
+/* Diseño interno de .ofertas y .stock (Ofertas y Stock Inmediato) */
+
+.ofertas{
+    background-color: #C0BBCB;
+    max-width: 100%;
+    grid-area: ofertas;
+    display: grid;
+    grid-template-areas:
+    "ofertasTitle"
+    "oferta1"
+    "oferta2"
+    ;
+    grid-template-rows: 40px auto auto;
+}
+
+.stock{
+    background-color: #C0BBCB;
+    max-width: 100%;
+    grid-area: stock;
+    display: grid;
+    grid-template-areas:
+    "stockTitle"
+    "stockProducts"
+    ;
+    grid-template-rows: 40px auto;
+}
+
+/* Diseño de .ofertas */
+
+.ofertasTitle{
+    grid-area: ofertasTitle;
+    justify-content: center;
+    padding-top: 1em;
+}
+
+.ofertasTitle p{
+    font-size: 30px;
+}
+
+.ofertas1{
+    display: grid;
+    grid-template-areas:
+    "oferta1Title"
+    "oferta1Content";
+}
+
+.ofertas2{
+    display: grid;
+    grid-template-areas:
+    "oferta2Title"
+    "oferta2Content";
+}
+
+.ofertas1Title p, .ofertas2Title p{
+    font-family: 'Montserrat', sans-serif;
+}
+
+        /* Diseño .oferta1 */
+
+.ofertas1Title{
+    grid-area: oferta1Title;
+    margin: 2em;
+    display: flex;
+    justify-content: center;
+}
+
+.ofertas1Content{
+    grid-area: oferta1Content;
+}
+
+        /* Diseño .oferta2 */
+
+.ofertas2Title{
+    grid-area: oferta2Title;
+    margin: 1em;
+    display: flex;
+    justify-content: center;
+}
+
+.ofertas2Content{
+    grid-area: oferta2Content;
+}
+
+/* Diseño de .stock */
+
+.stockTitle{
+    grid-area: stockTitle;
+    display: flex;
+    justify-content: center;
+}
+
+.stockTitle p{
+    font-size: 30px;
+}
+
+.stockProducts{
+    grid-area: stockProducts;
+}
+
+
+/* Diseño del footer */
+
+footer{
+    grid-area: footer;
+}
+
+footer *{
+    text-align: center;
+}
+
+#word{
+    display: flex;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+.social{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.socialLogos{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.whatsapp a{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.copyright{
+    display: flex;
+    justify-content: center;
+}
+
+/** Inicio Animaciones **/
+
+/* Animacion Comprar */
+
+.comprar{
+    position: absolute;
+    inset: 0;
+    margin: -1%;
+    display: flex;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    background-color: rgba(255, 255, 255, .2);
+    justify-content: center;
+    align-items: center;
+}
+
+.productImg, .comprar{
+    transition: 200ms ease-in-out;
+}
+
+.product:hover > .productImg img{
+    filter: blur(5px);
+    transform: scale(1.1);
+}
+
+.productImg > .comprar{
+    opacity: 0;
+}
+
+.productImg:hover > .comprar{
+    opacity: 1;
+}
+
+/* Fin Animacion Comprar */
+
+/* Media query para products */
+
+@media all and (max-width:900px){
+    .product{
+        flex-basis: 25%;
+    }
+    #menuImg{
+        height: 5vw;
+    }
+    #menuImg p{
+        font-size: 3vw;
+        align-self: center;
+    }
+    #main-nav a{
+        height: 5vw;
+        font-size: 2vw;
+    }
+    
+}
+
+@media (max-width:768px){
+    .product{
+        flex-basis:33.3%;
+    }
+    #main-nav a{
+        height: 9vw;
+        width: 20vw;
+        font-size: 2.5vw;
+    }
+    
+}
+
+@media (max-width:600px){
+    .product{
+        flex-basis:50%;
+    }
+    .productImg img{
+        width: 100%;
+    }
+    #main-nav a{
+        height: 15vw;
+        width: 25vw;
+        font-size: 3vw;
+    }
+    .imagoTipo a h1{
+        font-size: 15vw;
+    }
+}
