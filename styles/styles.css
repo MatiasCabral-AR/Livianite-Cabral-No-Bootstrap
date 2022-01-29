@@ -13,9 +13,71 @@
 }
 
 body{
-    background-color: #dfd4dc;
+    background-color: #dac2fe;
 }
 /* Diseño del menu */
+
+.navbar{
+    grid-area: navbar;
+    position: sticky;
+    top: 0;
+    display: flex;
+    background-color: #dac2fe;
+    z-index: 1;
+}
+
+.brandName{
+    display: block;
+}
+
+.brandName a{
+    margin-left: 1rem;
+    margin-right: 3rem;
+    font-family: vladimir;
+    font-size: 4rem;
+}
+
+.menu, .subMenu{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menuLink, .subMenuLink{
+    position: relative;
+    padding: 1rem;
+}
+
+.menuLink{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 10rem;
+}
+
+.menuLink:hover, .subMenuLink:hover{
+    background-color: #b686fd;
+    transition: 500ms ease;
+    
+}
+
+.subMenu{
+    position: absolute;
+    background-color: #dac2fe;
+    display: none;
+}
+
+.shop:hover .subMenu{
+    left: 50%;
+    transform: translateX(-50%);
+    display: inline-block;
+    position: absolute;
+    top: 100%;
+    width: max-content;
+}
+
 /*
 #menuImg{
     display: flex;
@@ -131,7 +193,8 @@ body{
 .indexLayout{
     display: grid;
     width: 100%vw;
-    grid-template-areas: 
+    grid-template-areas:
+    "navbar" 
     "header"
     "ofertas"
     "immediateStock"
