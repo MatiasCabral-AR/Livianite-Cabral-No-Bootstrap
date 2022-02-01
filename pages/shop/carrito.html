@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="/styles/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
@@ -12,22 +12,28 @@
 </head>
 <body>
     <header>
-        <nav id="main-nav">
-            <div id="menuImg">
-                <p>Menu<span class="arrow">&#x25BC</span></p>
+        <div class="navbar">
+            <div class="brandName"><a href="#">Livianite</a></div>
+            <div class="menuSpan">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
             <ul class="menu">
-                <li><a href="../pages/quienes-somos.html">Quienes Somos</a></li>
-                <li><a href="#word">Contacto</a></li>
-                <li><a href="../pages/ofertas.html">Ofertas y Stock Inmediato</a></li>
-                <li><a href="javascript:void(0)">Shop<span class="arrow">&#x25BC</span></a>
+                <li class="menuLink"><a href="/index.html">Inicio</a></li>
+                <li class="menuLink"><a href="/pages/quienes-somos.html">Quienes Somos</a></li>
+                <li class="menuLink shop">
+                    <a href="javascript:void(0)">Shop</a>
                     <ul class="subMenu">
-                        <li><a href="disenos.html">Diseños</a></li>
-                        <li><a href="informacion.html">Telas y Talles</a></li>
+                        <li class="subMenuLink"><a href="/pages/ofertas.html">Ofertas y Stock Inmediato</a></li>
+                        <li class="subMenuLink"><a href="/pages/shop/disenos.html">Diseños</a></li>
+                        <li class="subMenuLink"><a href="/pages/shop/informacion.html">Telas y Talles</a></li>
+                        <li class="subMenuLink"><a href="/pages/shop/carrito.html">Carrito</a></li>
                     </ul>
                 </li>
+                <li class="menuLink"><a href="#word">Contacto</a></li>
             </ul>
-        </nav>
+        </div>
     </header>
 </body>
 </html>
