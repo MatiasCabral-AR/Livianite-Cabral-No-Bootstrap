@@ -219,6 +219,7 @@ body{
     display: grid;
     height: auto;
     grid-template-areas: 
+    "navbar"
     "infoTitle"
     "infoBody"
     "footer";
@@ -350,6 +351,7 @@ body{
     display: grid;
     height: auto;
     grid-template-areas: 
+    "navbar"
     "disenoTitle"
     "disenoBody"
     "footer";
@@ -398,6 +400,7 @@ body{
 .qsLayout{
     display: grid;
     grid-template-areas: 
+    "navbar"
     "qstitle"
     "qsBody"
     "footer"
@@ -455,6 +458,7 @@ body{
     display: grid;
     height: auto;
     grid-template-areas: 
+    "navbar"
     "ofertasTitle"
     "ofertasBody"
     "footer";
